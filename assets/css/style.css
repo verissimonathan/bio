@@ -1,0 +1,254 @@
+:root {
+    --background: #1e1e1e;
+    --branco: #f7f7f7;
+    --verde: #00FFA3;
+    --fonte: 'Inter';
+}
+
+body {
+    background-color: var(--background);
+    color: var(--branco);
+    font-family: var(--fonte);
+    width: 100vw;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+}
+
+/*700 to 1024*/
+@media screen and (min-width: 700px) and (max-width:1023px) {
+    .container {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+/*> 1024*/
+@media screen and (min-width: 1024px) {
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+}
+/* 
+################################################
+################################################
+HEADER */
+.header {
+    display: block;
+    background-color: var(--background);
+    padding: 16px;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__menu-hamburguer {
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.header__botao {
+    display: none;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    width: 60vw;
+}
+
+.header__botao:checked ~ .lista-menu {
+    display: block;
+}
+
+.lista-menu__item {
+    padding: 16px;
+    background-color: var(--background);
+}
+
+.lista-menu__link {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.lista-menu__link:hover {
+    color: var(--verde);
+}
+
+.menu__logo {
+    color: var(--verde);
+    font-size: 16px;
+    font-weight: 500;
+}
+/* 
+#################################################
+#################################################
+SECTION SOBRE
+*/
+.sobre {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.sobre__titulo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.sobre__conteudo {
+    margin: 8px 24px;
+}
+
+/* 
+#################################################
+#################################################
+SECTION EXPERIENCIAS
+*/
+.experiencias__titulo {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 48px;
+    text-align: center;
+}
+
+.experiencias__card {
+    background-color: var(--branco);
+    margin: 16px 24px;
+    color: var(--background);
+    border-radius: 16px;
+}
+
+.card__conteudo {
+    padding: 16px;
+}
+
+.card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__cargo--titulo {
+    font-weight: 700;
+}
+
+.card__cargo--data {
+    font-weight: 400;
+}
+
+.card__descricao {
+    margin-top: 16px;
+}
+
+.card__skills {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.card__skills--titulo {
+    font-weight: 500;
+}
+
+.card__skills--lista {
+    margin-top: 8px;
+    display: inline-grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+@media screen and (min-width: 1024px) {
+    .card__skills--lista {
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 8px;
+    }
+}
+
+
+/* 
+#################################################
+#################################################
+SECTION FORMACOES
+*/
+.formacoes {
+    text-align: center;
+    margin: 24px;
+}
+
+.formacoes__titulo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.formacoes__lista {
+    text-align: left;
+}
+
+.formacoes__lista--item {
+    padding: 16px;
+}
+
+.formacoes__lista--titulo {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.formacoes__lista--escola {
+    font-size: 14;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 1024px) {
+    .formacoes__lista {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+}
+
+/* 
+#################################################
+#################################################
+FOOTER
+*/
+.footer {
+    background-color: var(--branco);
+    color: var(--background);
+    text-align: center;
+}
+
+.footer__titulo {
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 16px;
+}
+
+.footer__itens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__botao {
+    color: var(--background);
+    padding: 24px;
+}
+
+.botao {
+    padding: 4px;
+}
